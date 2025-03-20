@@ -27,7 +27,7 @@ OfficeViewer组件集成和使用都比较简单，具体步骤如下：
 dependencies {
 
     // add
-    implementation files("libs/OfficeViewer-1.0.aar")
+    implementation files("libs/OfficeViewer.aar")
 
 }
 ```
