@@ -1,0 +1,2 @@
+rootProject.name = "AwesomeOfficeViewer"
+include ':app'
