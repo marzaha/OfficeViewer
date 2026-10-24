@@ -27,6 +27,11 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    packagingOptions {
+        // AndroidManifest.xml 中声明了 android:extractNativeLibs="true"，保持旧版打包行为
+        jniLibs.useLegacyPackaging = true
+    }
+
 }
 
 dependencies {
