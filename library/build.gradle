@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 28
+    }
+
+    buildTypes {
+        release {
+            // 开启混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+// 打包aar
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: rootProject.uri('repo'))
+            pom.version = "1.0.1"
+            pom.artifactId = "OfficeViewer"
+            pom.groupId = "com.office.viewer"
+        }
+    }
+}

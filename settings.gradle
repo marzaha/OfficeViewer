@@ -1,2 +1,3 @@
 rootProject.name = "OfficeViewer"
 include ':app'
+include ':library'
